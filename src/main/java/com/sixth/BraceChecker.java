@@ -1,4 +1,4 @@
-package com.sixth;
+package main.java.com.sixth;
 
 import java.util.LinkedList;
 

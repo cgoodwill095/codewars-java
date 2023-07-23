@@ -1,8 +1,5 @@
-package com.sixth;
+package main.java.com.sixth;
 
-
-import java.util.ArrayList;
-import java.util.stream.IntStream;
 
 public class NumberUtils {
     public static boolean isNarcissistic(int number) {

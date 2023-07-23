@@ -1,6 +1,6 @@
-package test.com.sixth;
+package test.java.com.sixth;
 
-import com.sixth.BraceChecker;
+import main.java.com.sixth.BraceChecker;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 

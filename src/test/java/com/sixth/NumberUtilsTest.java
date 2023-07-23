@@ -1,9 +1,9 @@
-package test.com.sixth;
+package test.java.com.sixth;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.sixth.NumberUtils;
+import main.java.com.sixth.NumberUtils;
 import org.junit.jupiter.api.Test;
 
 class NumberUtilsTest {
