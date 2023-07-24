@@ -15,18 +15,17 @@ public class BraceCheckerTest {
 
     @Test
     public void testValid2() {
-        assertEquals(true, checker.isValid("()[]{}"));
+        assertEquals(true, checker.isValid("([{}])"));
     }
-
 
     @Test
     public void testValid3() {
-        assertEquals(true, checker.isValid("([]{}())"));
+        assertEquals(true, checker.isValid("([{}]){}[]([])"));
     }
 
     @Test
     public void testValid4() {
-        assertEquals(true, checker.isValid("(){}[({})]"));
+        assertEquals(true, checker.isValid("({}[]())"));
     }
 
 
@@ -34,17 +33,35 @@ public class BraceCheckerTest {
     public void testInvalid() {
         assertEquals(false, checker.isValid("[(])"));
     }
+
     @Test
     public void testInvalid2() {
-        assertEquals(false, checker.isValid("("));
+        assertEquals(false, checker.isValid("()[(])"));
     }
+
     @Test
     public void testInvalid3() {
-        assertEquals(false, checker.isValid("[]{}({)}"));
+        assertEquals(false, checker.isValid("([(]))"));
     }
+
     @Test
     public void testInvalid4() {
-        assertEquals(false, checker.isValid("[](])"));
+        assertEquals(false, checker.isValid("{[]()(})"));
     }
+
+    @Test
+    public void testInvalid5() {
+        assertEquals(false, checker.isValid("{[()(})"));
+    }
+
+    @Test
+    public void testInvalid6() {
+        assertEquals(false, checker.isValid("{"));
+    }
+    @Test
+    public void testInvalid7() {
+        assertEquals(false, checker.isValid("(((({{"));
+    }
+
 
 }
