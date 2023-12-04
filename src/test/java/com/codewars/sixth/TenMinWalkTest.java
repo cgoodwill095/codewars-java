@@ -1,6 +1,6 @@
-package test.java.com.sixth;
+package test.java.com.codewars.sixth;
 
-import main.java.com.sixth.TenMinWalk;
+import main.java.com.codewars.sixth.TenMinWalk;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

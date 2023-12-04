@@ -1,4 +1,4 @@
-package main.java.com.sixth;
+package main.java.com.codewars.sixth;
 
 public class TenMinWalk {
     public static boolean isValid(char[] walk) {
@@ -23,6 +23,9 @@ public class TenMinWalk {
                     break;
             }
         }
+        System.out.println(5/2);
+        System.out.println(5%2);
+
         return (lat==0 && lon==0);
     }
 }
