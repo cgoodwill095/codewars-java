@@ -1,4 +1,4 @@
-package main.java.com.sixth;
+package main.java.com.codewars.sixth;
 
 import java.util.LinkedList;
 
