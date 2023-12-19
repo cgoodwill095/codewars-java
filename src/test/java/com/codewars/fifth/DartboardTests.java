@@ -1,8 +1,8 @@
-package test.java.com.fifth;
+package test.java.com.codewars.fifth;
 
-import main.java.com.fifth.Dartboard;
+import main.java.com.codewars.fifth.Dartboard;
 import org.junit.Test;
-import java.util.Random;
+
 import static org.junit.Assert.assertEquals;
 
 public class DartboardTests {

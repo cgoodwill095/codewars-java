@@ -1,4 +1,4 @@
-package main.java.com.fifth;
+package main.java.com.codewars.fifth;
 
 public class Dartboard {
     /*
