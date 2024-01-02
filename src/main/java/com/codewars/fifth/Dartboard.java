@@ -38,89 +38,126 @@ public class Dartboard {
 
             each angle is 18 degrees
             from top, clockwise, 20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19, 7, 16, 8, 11, 14, 9, 12, 5
-
-            0,0 - straight up would be in the middle of 20, each section is 18 degrees, so 20 would the start of 20's section
-            would be -9 from
-
-
-            angle + 9 degrees
-
-
-
-
+            From right, counter clockwise 6, 13, 4, 18, 1 ,20, 5, 12, 9, 14, 11, 8, 16, 7, 19, 3, 17, 2, 15, 10
+            0-9 = 6, 9-27 = 13, 27-45=4, 45-63=18, 63-81 = 1, 81-99=20, 99-117=5,
      */
     public String getScore(double x, double y)
     {
         // Calculate which scoring section
         String score = "";
+        double c = (Math.sqrt(Math.pow(x,2) + Math.pow(y, 2)));
+        if(c <6.35){
+            score = "DB";
+            return score;
+        }
+        else if(c <15.9){
+            score = "SB";
+            return score;
+        }
+        double angle = this.calculateAngle(x,y);
 
-        double c = (Math.sqrt((x*x) + (y*y)));
 
-        //y = opposite
-        //x = adjacent
-        // tan(angle) = opposite/adjacent
 
         //If bullseye or bull, then direction doesn't matter
-        if(c <12.7){
-            score = "DB";
-        }
-        else if(c <31.8){
-            score = "SB";
-        }
-        else if(c <198){
-            //standard point
-            double testDegree = Math.tan(x/y);
-            System.out.println(testDegree);
-        }
-        else if(c <214) {
-            //triple
-            score="t";
 
+        if(c <99 && c>=15.9){
+            return String.valueOf(scoreNumber(angle));
+            }
+        else if(c <107) {
+            score="T"+scoreNumber(angle);
         }
-        else if(c <324){
-            //standard points
+        else if(c <162){
+            return String.valueOf(scoreNumber(angle));
         }
-        else if(c <340){
-            // double
+        else if(c <170){
+            score="D"+scoreNumber(angle);
         }
-        else if(c>=340){
+        else if(c>=170){
             score="X";
         }
-        int angle = calculateAngle(x, y);
         //
         return score;
     }
 
 
-    public int calculateAngle(double x, double y){
-        Boolean negX = false;
-        Boolean negY = false;
-        if(x<0){
-            negX = true;
+    public double calculateAngle(double x, double y){
+        double theta = Math.toDegrees(Math.atan2(y,x));
+        theta = (theta + 360) % 360;
+        return theta;
+    }
+
+    public int scoreNumber(double angle){
+        if(angle>351 || angle<9){
+            return 6;
         }
-        if(y<0){
-            negY = true;
+        if(angle>=9){
+            angle = angle + 9;
         }
+        int points =(int)angle / 18;
+        switch(points){
+            case 0:
+                return 6;
 
+            case 1:
+                return 13;
 
-        if(negX){
-            if(negY){
+            case 2:
+                return 4;
 
-            }
-            else{
+            case 3:
+                return 18;
 
-            }
+            case 4:
+                return 1;
+                
+            case 5:
+                return 20;
+                
+            case 6:
+                return 5;
+                
+            case 7:
+                return 12;
+                
+            case 8:
+                return 9;
+                
+            case 9:
+                return 14;
+                
+            case 10:
+                return 11;
+                
+            case 11:
+                return 8;
+                
+            case 12:
+                return 16;
+                
+            case 13:
+                return 7;
+                
+            case 14:
+                return 19;
+                
+            case 15:
+                return 3;
+                
+            case 16:
+                return 17;
+                
+            case 17:
+                return 2;
+                
+            case 18:
+                return 15;
+                
+            case 19:
+                return 10;
+
+            default:
+                return 0;
         }
-        else{
-            if(negY){
-
-            }
-            else{
-
-            }
-        }
-
-
     }
 
 }

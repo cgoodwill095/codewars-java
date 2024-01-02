@@ -46,9 +46,9 @@ public class DartboardTests {
     }
 
     @Test
-    public void getSingle20Test()
-    {
-        assertEquals("20", dartboard.getScore(5, 90));
+    public void getSingle20Test() {
+        assertEquals("20", dartboard.getScore(-5.43, 117.95));
+
     }
 
 }
