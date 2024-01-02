@@ -1,8 +1,8 @@
-package test.java.com.fifth;
+package test.java.com.codewars.fifth;
 
-import main.java.com.fifth.Dartboard;
+import main.java.com.codewars.fifth.Dartboard;
 import org.junit.Test;
-import java.util.Random;
+
 import static org.junit.Assert.assertEquals;
 
 public class DartboardTests {
@@ -46,9 +46,9 @@ public class DartboardTests {
     }
 
     @Test
-    public void getSingle20Test()
-    {
-        assertEquals("20", dartboard.getScore(5, 90));
+    public void getSingle20Test() {
+        assertEquals("20", dartboard.getScore(-5.43, 117.95));
+
     }
 
 }
