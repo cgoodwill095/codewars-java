@@ -1,4 +1,4 @@
-package test.java.com.codewars;
+package test.java.com.codewars.fifth;
 
 import main.java.com.codewars.fifth.IsTheKingInCheck;
 import org.junit.jupiter.api.Test;
@@ -130,6 +130,5 @@ public class IsTheKingInCheckTests {
 
             assertEquals(false, IsTheKingInCheck.isTheKinginCheck(test9));
         }
-    }
 
 }
