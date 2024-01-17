@@ -1,46 +1,7 @@
 package main.java.com.codewars.fifth;
 
 public class Dartboard {
-    /*
-        Create your own mechanical dartboard that gives back your score based on the coordinates of your dart.
 
-    Task:
-
-        Use the scoring rules for a standard dartboard:
-        Finish method:
-
-        public String getScore(double x, double y);
-
-        The coordinates are `(x, y)` are always relative to the center of the board (0, 0). The unit is millimeters. If you throw your dart 5 centimeters to the left and 3 centimeters below, it is written as:
-
-        String score = dartboard.getScore(-50, -30);
-
-        Possible scores are:
-            Outside of the board: `"X"`
-            Bull's eye: `"DB"`
-            Bull: `"SB"`
-            A single number, example: `"10"`
-            A triple number: `"T10"`
-            A double number: `"D10"`
-        A throw that ends exactly on the border of two sections results in a bounce out. You can ignore this because all the given coordinates of the tests are within the sections.
-        The diameters of the circles on the dartboard are:
-            Bull's eye: `12.70 mm`
-            Bullseye area = pi * 6.35 ^2
-            Generate area for pi, assign to variable, then use a switch to define where the dart lands.
-
-            edit - even easier - just figure out if the spot is within the radius
-            Keep bounce outs in mind.
-            Bull: `31.8 mm`
-            Triple ring inner circle: `198 mm`
-            Triple ring outer circle: `214 mm`
-            Double ring inner circle: `324 mm`
-            Double ring outer circle: `340 mm`
-
-            each angle is 18 degrees
-            from top, clockwise, 20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19, 7, 16, 8, 11, 14, 9, 12, 5
-            From right, counter clockwise 6, 13, 4, 18, 1 ,20, 5, 12, 9, 14, 11, 8, 16, 7, 19, 3, 17, 2, 15, 10
-            0-9 = 6, 9-27 = 13, 27-45=4, 45-63=18, 63-81 = 1, 81-99=20, 99-117=5,
-     */
     public String getScore(double x, double y)
     {
         // Calculate which scoring section

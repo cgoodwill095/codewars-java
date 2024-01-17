@@ -3,7 +3,7 @@
 Uploading completed CodeWars challenges that I have done in Java.
 I'm also using this repo as an opportunity to test out the tools available in github, and to practice best practices regarding branches/PRs, etc.
 
-###Personal objectives
+### Personal objectives
 As part of my professional role, there are certain areas of Java/software development that I don't touch too often.
 I'd like to gain more experience and knowledge of the following areas due to this, as they will come up.
 - Threading
@@ -15,7 +15,7 @@ I'd like to gain more experience and knowledge of the following areas due to thi
 - Cybersecurity
 
 
-####Examples of threading
+#### Examples of threading
 
 #### Examples of CL apps
 
@@ -26,5 +26,7 @@ I'd like to gain more experience and knowledge of the following areas due to thi
 #### Examples of Mobile dev
 
 #### Examples of dynamic programming
+
+#### Examples of recursive programming
 
 #### Examples of applying SOLID principles
